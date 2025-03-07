@@ -73,7 +73,7 @@ async function handleOpenAIRequest(request, env, pathParts) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${env.OPENAI_KEY}`,
+        'Authorization': `Bearer ${{secrets.OPENAI_API_KEY}}`, 
       },
       body: JSON.stringify({
         model: 'dall-e-3',
